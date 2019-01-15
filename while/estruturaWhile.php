@@ -8,7 +8,7 @@ while ($condicao) {
 
     if ($numero === 3) {
 
-        echo "TRÊS!!!";
+        echo "TRÊS!!! ";
         $condicao = false;
 
     }
@@ -16,3 +16,5 @@ while ($condicao) {
     echo $numero . "  ";
 
 }
+
+?>
