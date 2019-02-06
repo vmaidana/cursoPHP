@@ -4,7 +4,7 @@ echo date("d/m/Y h:i:s");
 
 echo "<br>";
 
-echo date("d/m/Y h:i:s", 1548323589);
+echo date("d/m/Y h:i:s", 1548323589); // usando timestamp fixa a data
 
 echo "<br>";
 
