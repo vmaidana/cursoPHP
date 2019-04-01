@@ -1,7 +1,7 @@
 <?php
 /* tudo que for na raíz da pasta class são as classes genéricas,
- tudo que estiver em subpastas, tem seu namespace e são mais específicas*/
- 
+ tudo que estiver em subpastas, tem seu namespace obrigatoriamente e são mais específicas*/
+
 spl_autoload_register(function($nameClass){
     var_dump($nameClass);
 
