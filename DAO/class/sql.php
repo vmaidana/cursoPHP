@@ -6,6 +6,7 @@ class Sql extends PDO {
     public function __construct(){
 
         $this->conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "");
+        $this->conn->exec("set names utf8"); // USAR ISSO PARA RESOLVER PROBLEMAS COM EXIBIÇÃO DE ACENTUAÇÃO
 
     }
 
