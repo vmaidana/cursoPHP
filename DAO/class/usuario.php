@@ -131,13 +131,29 @@ class Usuario {
 
         $sql = new Sql();
 
-        $sql->query("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID", ARRAY(
+        $sql->query("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID", array(
             ':LOGIN'=>$this->getDeslogin(),
             ':PASSWORD'=>$this->getDessenha(),
             ':ID'=>$this->getIdusuario()
         ));
 
     } // fim do método update
+
+    // método para deletar um usuário do banco e zerar a linha da tabela
+    public function delete() {
+
+        $sql = new Sql();
+
+        $sql->query("DELETE FROM tbusuarios WHERE idusuario = :ID", array(
+            'ID'=>$this->getIdusuario()
+        ));
+
+        $this->setIdusuario(0);
+        $this->setDeslogin("");
+        $this->setDessenha("");
+        $this->setDtcadastro(new DateTime());
+
+    } // fim do método delete
 
     // método construtor para o insert
     public function __construct($login = "", $password = ""){
